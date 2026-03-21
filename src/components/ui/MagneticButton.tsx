@@ -36,9 +36,9 @@ export function MagneticButton({
   };
 
   const variants = {
-    primary: "bg-blue-600 text-white hover:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.3)]",
-    secondary: "bg-white/10 text-white hover:bg-white/20 backdrop-blur-md border border-white/10",
-    outline: "border border-white/20 text-white hover:bg-white/5",
+    primary: "bg-blue-600 text-white shadow-[0_4px_14px_rgba(37,99,235,0.4),inset_0_1px_0_rgba(255,255,255,0.2)] hover:bg-blue-500 hover:shadow-[0_6px_20px_rgba(37,99,235,0.5),inset_0_1px_0_rgba(255,255,255,0.3)] border border-blue-500",
+    secondary: "bg-[#1e293b] border border-slate-700 text-white shadow-sm hover:bg-slate-800 hover:border-slate-600",
+    outline: "border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800/50 hover:border-slate-600",
   };
 
   return (
@@ -47,9 +47,10 @@ export function MagneticButton({
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       animate={{ x: position.x, y: position.y }}
-      transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20, mass: 0.5 }}
+      // Changed from rounded-full to rounded-xl for structured desktop software aesthetics
       className={cn(
-        "relative rounded-full px-8 py-3.5 font-semibold transition-colors duration-300",
+        "relative rounded-xl px-8 py-3.5 font-semibold transition-all duration-300",
         variants[variant],
         className
       )}

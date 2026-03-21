@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import { GlassCard } from "../ui/GlassCard";
-import { Clock, LineChart, Package, Users, Wallet, AlertCircle } from "lucide-react";
+import { IconClockHour4, IconChartLine, IconPackage, IconUsers, IconWallet, IconAlertCircle } from "@tabler/icons-react";
 
 const problems = [
-  { icon: Clock, text: "Losing hours closing the register daily.", col: "md:col-span-2" },
-  { icon: AlertCircle, text: "Unrecorded cash discrepancies.", col: "md:col-span-1" },
-  { icon: Users, text: "Customers tired of waiting in line.", col: "md:col-span-1" },
-  { icon: Package, text: "Inventory sync failures.", col: "md:col-span-2" },
+  { icon: IconClockHour4, text: "Losing hours closing the register daily.", col: "md:col-span-2" },
+  { icon: IconAlertCircle, text: "Unrecorded cash discrepancies.", col: "md:col-span-1" },
+  { icon: IconUsers, text: "Customers tired of waiting in line.", col: "md:col-span-1" },
+  { icon: IconPackage, text: "Inventory sync failures.", col: "md:col-span-2" },
 ];
 
 export function BentoProblem() {

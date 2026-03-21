@@ -11,37 +11,18 @@ import { PricingCards } from "@/components/sections/PricingCards";
 import { CTAFinal } from "@/components/sections/CTAFinal";
 import { Footer } from "@/components/sections/Footer";
 
+import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
+
 export default function Home() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
   return (
-    <main className="relative flex flex-col items-center justify-start overflow-hidden bg-[#020617] min-h-screen">
+    <main className="relative min-h-screen selection:bg-blue-500/30">
+      <AnimatedBackground />
       
-      {/* Interactive Global Cursor Glow */}
-      <div
-        className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300 opacity-60"
-        style={{
-          background: `radial-gradient(800px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.04), transparent 40%)`,
-        }}
-      />
-
-      {/* Grain texture overlay for premium feel */}
+      {/* Texture Overlay */}
       <div 
-        className="pointer-events-none fixed inset-0 z-0 opacity-[0.03] mix-blend-overlay" 
-        style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}
-      />
+        className="pointer-events-none fixed inset-0 z-50 opacity-[0.03] mix-blend-overlay"
+        style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")' }}
+      ></div>
 
       {/* Navigation (Placeholder) */}
       <nav className="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-[#020617]/40 backdrop-blur-xl border-b border-white/5">
@@ -51,7 +32,7 @@ export default function Home() {
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
           <a href="#" className="hover:text-white transition-colors">Features</a>
           <a href="#" className="hover:text-white transition-colors">Pricing</a>
-          <a href="#" className="hover:text-white transition-colors">Demo</a>
+          <a href="/ui-kit" className="text-purple-400 hover:text-purple-300 transition-colors font-semibold">UI Kit ✨</a>
         </div>
         <button className="text-sm font-medium px-4 py-2 rounded-full border border-white/10 hover:bg-white/10 transition-colors">
           Login

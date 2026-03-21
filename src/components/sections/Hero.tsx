@@ -5,12 +5,9 @@ import { MagneticButton } from "../ui/MagneticButton";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden">
-      {/* Enhanced Animated Blobs */}
-      <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-purple-600/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob" />
-      <div className="absolute top-1/3 -right-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob animation-delay-2000" />
-      <div className="absolute -bottom-32 left-1/4 w-[700px] h-[700px] bg-indigo-600/20 rounded-full mix-blend-screen filter blur-[150px] animate-blob animation-delay-4000" />
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Remove static local blobs since we have a global dynamic background now */}
+      
       {/* Main Content */}
       <div className="z-10 text-center flex flex-col items-center px-4 max-w-5xl mx-auto mt-16">
         <motion.div

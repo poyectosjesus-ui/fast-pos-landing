@@ -2,25 +2,25 @@
 
 import { motion } from "framer-motion";
 import { GlassCard } from "../ui/GlassCard";
-import { ScanBarcode, CreditCard, Receipt } from "lucide-react";
+import { IconBarcode, IconCreditCard, IconReceipt } from "@tabler/icons-react";
 
 export function HowItWorks() {
   const steps = [
     {
       num: "01",
-      icon: ScanBarcode,
+      icon: IconBarcode,
       title: "Scan Items",
       desc: "Instantly recognize barcodes using your camera or scanner.",
     },
     {
       num: "02",
-      icon: CreditCard,
+      icon: IconCreditCard,
       title: "Select Payment",
       desc: "Process cards, cash, or credit effortlessly.",
     },
     {
       num: "03",
-      icon: Receipt,
+      icon: IconReceipt,
       title: "Done",
       desc: "Receipt generated. Sales recorded automatically.",
     },

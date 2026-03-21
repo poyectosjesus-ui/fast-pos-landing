@@ -12,9 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import { CursorTrailer } from "@/components/ui/CursorTrailer";
+
 export const metadata: Metadata = {
-  title: "Hola.",
-  description: "A super modern greeting.",
+  title: "Fast POS | The intelligent operating system for your business",
+  description: "A system that automates everything. No complications, no slow setups. Just pure speed and control with Deep Glassmorphism Design.",
 };
 
 export default function RootLayout({
@@ -25,9 +27,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className="dark"
     >
       <body className="bg-[#020617] text-white min-h-screen selection:bg-indigo-500/30">
+        <CursorTrailer />
         {children}
       </body>
     </html>
