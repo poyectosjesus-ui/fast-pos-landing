@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export function SocialProof() {
   const stats = [
-    { label: "Active Businesses", value: "5,000+" },
-    { label: "Uptime guarantee", value: "99.9%" },
-    { label: "Discrepancies", value: "0" },
+    { label: "Tiendas Activas", value: "5,000+" },
+    { label: "Disponibilidad", value: "99.9%" },
+    { label: "Fugas de Efectivo", value: "0" },
   ];
 
   return (

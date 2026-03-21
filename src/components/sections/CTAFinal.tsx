@@ -18,7 +18,7 @@ export function CTAFinal() {
           viewport={{ once: true }}
           className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-8"
         >
-          Ready to scale?
+          ¿Listo para blindar tus ventas?
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export function CTAFinal() {
           viewport={{ once: true }}
           className="text-xl text-slate-400 max-w-2xl mb-12"
         >
-          Stop losing money due to slow operations. Join thousands of merchants who upgraded their registers to Fast POS today.
+          Deja de perder clientes y dinero por culpa de sistemas lentos. Únete a miles de comercios que ya procesan ventas a máxima velocidad con Fast POS.
         </motion.p>
         
         <motion.div
@@ -37,9 +37,9 @@ export function CTAFinal() {
            viewport={{ once: true }}
            className="relative group inline-block"
         >
-          <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
-          <MagneticButton className="px-12 py-5 text-lg">
-            Schedule a Free Demo
+          <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
+          <MagneticButton variant="primary" className="px-12 py-5 text-lg flex items-center gap-2">
+            Descargar Instalador (Prueba Gratis)
           </MagneticButton>
         </motion.div>
       </div>

@@ -1,59 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GlassCard } from "../ui/GlassCard";
-import { IconBolt, IconDeviceMobile, IconCircleCheckFilled } from "@tabler/icons-react";
+import { Gallery } from "../ui/Gallery";
 
 export function SolutionShowcase() {
+  const localStockImages = [
+    { url: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200", alt: "Mercado local y abarrotes", span: "md:col-span-2" },
+    { url: "https://images.unsplash.com/photo-1556740749887-f25b7a11dfa4?auto=format&fit=crop&q=80&w=800", alt: "Terminal de cobro con tarjeta" },
+    { url: "https://images.unsplash.com/photo-1556741533-6e118e5b61e2?auto=format&fit=crop&q=80&w=800", alt: "Pantalla táctil de Punto de Venta" },
+    { url: "https://images.unsplash.com/photo-1647427017458-f6df91d046eb?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0", alt: "Operación de retail", span: "md:col-span-2" },
+  ];
+
   return (
-    <section className="relative w-full max-w-6xl mx-auto px-6 py-32">
-      <div className="text-center mb-24">
+    <section className="relative w-full max-w-5xl mx-auto px-6 py-32">
+      <div className="text-center mb-16">
         <motion.div
-           initial={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
-           whileInView={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
+           initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
+           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
            viewport={{ once: true, margin: "-100px" }}
-           transition={{ duration: 1, ease: "easeOut" }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
            className="inline-block"
         >
-          <span className="px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-semibold tracking-wide uppercase mb-6 inline-block shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_0_20px_rgba(37,99,235,0.15)]">
-            The Solution
+          <span className="px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-semibold tracking-wide uppercase mb-6 inline-block shadow-inner">
+            Contexto Real
           </span>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
-            Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 line-clamp-1 pb-2">Fast POS</span>.
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
+            Diseñado para la realidad del <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 line-clamp-1 pb-2">Mostrador</span>
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            A system that automates everything. No complications, no slow setups. Just pure speed and control.
+          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-medium">
+            Entendemos el caos del comercio local. Fast POS está construido para sobrevivir al flujo constante de clientes sin un solo parpadeo.
           </p>
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <GlassCard className="group border-t-blue-500/20">
-          <IconBolt className="w-10 h-10 text-blue-400 mb-6 group-hover:text-white transition-colors drop-shadow-[0_0_15px_rgba(96,165,250,0.5)]" />
-          <h3 className="text-2xl font-semibold text-white mb-3">Lightning Fast</h3>
-          <p className="text-slate-400 leading-relaxed">
-            Scan and checkout in under 30 seconds. Keep your lines moving and your customers smiling.
-          </p>
-        </GlassCard>
-
-        <GlassCard className="group relative overflow-hidden border-t-purple-500/20">
-          {/* Subtle gradient glow specific to this premium card */}
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <IconDeviceMobile className="relative z-10 w-10 h-10 text-purple-400 mb-6 group-hover:text-white transition-colors drop-shadow-[0_0_15px_rgba(192,132,252,0.5)]" />
-          <h3 className="relative z-10 text-2xl font-semibold text-white mb-3">Mobile First</h3>
-          <p className="relative z-10 text-slate-400 leading-relaxed">
-            Monitor your live sales and manage inventory from anywhere in the world right from your phone.
-          </p>
-        </GlassCard>
-
-        <GlassCard className="group border-t-green-500/20">
-          <IconCircleCheckFilled className="w-10 h-10 text-green-400 mb-6 group-hover:text-white transition-colors drop-shadow-[0_0_15px_rgba(74,222,128,0.5)]" />
-          <h3 className="text-2xl font-semibold text-white mb-3">Error Free</h3>
-          <p className="text-slate-400 leading-relaxed">
-            Automated register closures and exact tracking. Every penny is accounted for seamlessly.
-          </p>
-        </GlassCard>
-      </div>
+      <Gallery images={localStockImages} />
     </section>
   );
 }

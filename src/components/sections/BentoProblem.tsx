@@ -1,52 +1,48 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GlassCard } from "../ui/GlassCard";
-import { IconClockHour4, IconChartLine, IconPackage, IconUsers, IconWallet, IconAlertCircle } from "@tabler/icons-react";
+import { FeatureCard } from "../ui/FeatureCard";
+import { IconWifiOff, IconClockHour4, IconChartLine, IconAlertCircle } from "@tabler/icons-react";
 
 const problems = [
-  { icon: IconClockHour4, text: "Losing hours closing the register daily.", col: "md:col-span-2" },
-  { icon: IconAlertCircle, text: "Unrecorded cash discrepancies.", col: "md:col-span-1" },
-  { icon: IconUsers, text: "Customers tired of waiting in line.", col: "md:col-span-1" },
-  { icon: IconPackage, text: "Inventory sync failures.", col: "md:col-span-2" },
+  { icon: <IconWifiOff />, title: "Dependencia de Internet", desc: "Si falla tu proveedor o se va la luz, tu negocio entero se paraliza y no puedes cobrar.", col: "md:col-span-2" },
+  { icon: <IconClockHour4 />, title: "Cortes de Caja Lentos", desc: "Pierdes horas de sueño cuadrando números inexactos en la madrugada.", col: "md:col-span-1" },
+  { icon: <IconAlertCircle />, title: "Hardware Incompatible", desc: "Tu báscula digital o impresora térmica USB no es reconocida por sistemas web.", col: "md:col-span-1" },
+  { icon: <IconChartLine />, title: "Fuga de Inventario", desc: "Vendes a ciegas sin saber qué te falta o qué productos están mermando tu utilidad diaria.", col: "md:col-span-2" },
 ];
 
 export function BentoProblem() {
   return (
-    <section className="relative w-full max-w-6xl mx-auto px-6 py-24">
+    <section className="relative w-full max-w-5xl mx-auto px-6 py-24">
       <div className="text-center mb-16">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold tracking-tight text-white"
+          className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4"
         >
-          Is this happening to you?
+          ¿Tu sistema actual frena tus ventas?
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-slate-400 mt-4 text-lg"
+          className="text-slate-400 text-lg md:text-xl font-medium"
         >
-          Slow legacy systems are costing you money and reputation.
+          El internet inestable y el software de la nube están costándote dinero y clientes.
         </motion.p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {problems.map((prob, i) => (
-          <GlassCard 
+          <FeatureCard 
             key={i}
-            className={`group flex items-center gap-6 p-8 transition-colors hover:bg-white/[0.05] ${prob.col}`}
-          >
-            <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-red-500/10 flex items-center justify-center border border-red-500/20 group-hover:scale-110 transition-transform duration-500 ease-out">
-              <prob.icon className="w-6 h-6 text-red-400" />
-            </div>
-            <p className="text-xl font-medium text-slate-200">
-              {prob.text}
-            </p>
-          </GlassCard>
+            icon={prob.icon}
+            title={prob.title}
+            description={prob.desc}
+            className={prob.col}
+          />
         ))}
       </div>
     </section>
