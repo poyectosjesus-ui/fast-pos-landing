@@ -22,14 +22,17 @@ export function GlassCard({ children, className, ...props }: GlassCardProps) {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       // Changed to rounded-2xl for a more structural, desktop hardware feel, replacing the floaty [2rem]
       className={cn(
-        "relative overflow-hidden rounded-2xl bg-[#0f172a]/90 backdrop-blur-xl p-8",
-        "border border-slate-800 shadow-xl",
+        "relative p-8 rounded-2xl bg-white/70 backdrop-blur-md border border-slate-200/50 shadow-sm transition-all duration-300",
         className
       )}
       {...props}
     >
-      {/* Subtle top inner highlight to simulate 3D acrylic edge */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/[0.05] to-transparent" />
+      {/* Subtle Light Inner Glow */}
+      <div className="absolute inset-0 rounded-2xl border border-white/60 pointer-events-none" />
+      
+      {/* Optional Top Highlight for premium feel */}
+      <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent opacity-50" />
+      
       {children}
     </motion.div>
   );

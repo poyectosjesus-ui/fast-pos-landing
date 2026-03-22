@@ -29,7 +29,7 @@ export default function UIKitPage() {
   const [activeTab, setActiveTab] = useState("Ventas");
 
   return (
-    <div className="relative min-h-screen py-24 selection:bg-blue-500/30 text-white">
+    <div className="relative min-h-screen py-24 selection:bg-blue-500/30 text-slate-900">
       <AnimatedBackground />
       <div className="max-w-5xl mx-auto px-8 space-y-24 relative z-10">
         
@@ -37,14 +37,14 @@ export default function UIKitPage() {
         <div>
           <GlowBadge variant="purple" className="mb-6">Fast POS UI Kit</GlowBadge>
           <AnimatedTextReveal text="Industrial Design System" className="text-5xl md:text-7xl mb-4 font-bold tracking-tight" />
-          <p className="text-slate-400 text-xl font-medium max-w-2xl">
+          <p className="text-slate-600 text-xl font-medium max-w-2xl">
             A showcase of the stable, structural, high-contrast components built for the Offline POS Platform.
           </p>
         </div>
 
         {/* Buttons & Tabs */}
         <section className="space-y-8">
-          <h3 className="text-2xl font-semibold border-b border-white/10 pb-4">Controls & Navigation</h3>
+          <h3 className="text-2xl font-semibold border-b border-slate-200 pb-4">Controls & Navigation</h3>
           <div className="flex flex-wrap gap-6 items-center">
             <MagneticButton variant="primary">Descargar Instalador</MagneticButton>
             <MagneticButton variant="secondary">Probar Demo</MagneticButton>
@@ -61,7 +61,7 @@ export default function UIKitPage() {
 
         {/* Tactical Metrics & Features */}
         <section className="space-y-8">
-          <h3 className="text-2xl font-semibold border-b border-white/10 pb-4">Metrics & Features</h3>
+          <h3 className="text-2xl font-semibold border-b border-slate-200 pb-4">Metrics & Features</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <MetricBox value="10x" label="Velocidad Transaccional" trend="Top Tier" />
             <MetricBox value="0ms" label="Latencia de Red" trend="100% Offline" />
@@ -88,7 +88,7 @@ export default function UIKitPage() {
 
         {/* Cards & Inputs */}
         <section className="space-y-8">
-          <h3 className="text-2xl font-semibold border-b border-white/10 pb-4">Forms & Structural Cards</h3>
+          <h3 className="text-2xl font-semibold border-b border-slate-200 pb-4">Forms & Structural Cards</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <GlassCard className="flex flex-col gap-6">
               <h4 className="text-xl font-medium">Acceso Administrativo</h4>
@@ -108,9 +108,9 @@ export default function UIKitPage() {
             </GlassCard>
 
             <PricingCard 
-              tier="Licencia Vitalicia" 
+              title="Licencia Vitalicia" 
               price="$4,999" 
-              description="Paga una vez, úsalo para siempre. Instalación local en 1 equipo principal." 
+              period="/único pago" 
               features={[
                 "Catálogo de productos ilimitados",
                 "Inventario estricto",
@@ -124,7 +124,7 @@ export default function UIKitPage() {
 
         {/* Badges */}
         <section className="space-y-8">
-          <h3 className="text-2xl font-semibold border-b border-white/10 pb-4">System States</h3>
+          <h3 className="text-2xl font-semibold border-b border-slate-200 pb-4">System States</h3>
           <div className="flex gap-4">
             <GlowBadge variant="blue">Sistema Activo</GlowBadge>
             <GlowBadge variant="purple">Imprimiendo</GlowBadge>
@@ -135,16 +135,16 @@ export default function UIKitPage() {
 
         {/* Real Photography Framework */}
         <section className="space-y-8">
-          <div className="flex flex-col gap-2 border-b border-white/10 pb-4">
+          <div className="flex flex-col gap-2 border-b border-slate-200 pb-4">
             <h3 className="text-2xl font-semibold">Real-World Context</h3>
-            <p className="text-slate-400 text-sm">Validating the software context organically without AI generation.</p>
+            <p className="text-slate-600 text-sm">Validating the software context organically without AI generation.</p>
           </div>
           <Gallery images={stockImages} />
         </section>
 
         {/* Modals */}
         <section className="space-y-8 pb-32">
-          <h3 className="text-2xl font-semibold border-b border-white/10 pb-4">Immersive Modals</h3>
+          <h3 className="text-2xl font-semibold border-b border-slate-200 pb-4">Immersive Modals</h3>
           <MagneticButton variant="primary" onClick={() => setIsModalOpen(true)}>
             Abrir Interfaz Crítica
           </MagneticButton>
@@ -154,7 +154,7 @@ export default function UIKitPage() {
             onClose={() => setIsModalOpen(false)}
             title="Corte de Caja"
           >
-            <p className="text-slate-400 mb-8">
+            <p className="text-slate-600 mb-8 font-medium">
               ¿Estás seguro de realizar el corte Z? Esta acción totalizará las ventas del turno y reiniciará los contadores en efectivo.
             </p>
             <div className="flex gap-4">

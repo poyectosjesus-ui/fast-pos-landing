@@ -25,16 +25,16 @@ export default function Home() {
       ></div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-[#020617]/40 backdrop-blur-xl border-b border-white/5">
-        <div className="text-2xl font-bold tracking-tight text-white">
-          FAST<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">POS</span>
+      <nav className="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-white/80 backdrop-blur-xl border-b border-slate-200/80 shadow-sm">
+        <div className="text-2xl font-black tracking-tight text-slate-900">
+          FAST<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">POS</span>
         </div>
-        <div className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
-          <a href="#" className="hover:text-white transition-colors">Características</a>
-          <a href="#" className="hover:text-white transition-colors">Inversión</a>
-          <a href="/ui-kit" className="text-blue-400 hover:text-blue-300 transition-colors font-semibold">UI Kit ✨</a>
+        <div className="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
+          <a href="#" className="hover:text-blue-600 transition-colors">Características</a>
+          <a href="#" className="hover:text-blue-600 transition-colors">Inversión</a>
+          <a href="/ui-kit" className="text-blue-600 hover:text-blue-500 transition-colors font-bold">UI Kit ✨</a>
         </div>
-        <button className="text-sm font-medium px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors">
+        <button className="text-sm font-bold px-6 py-2.5 rounded-full bg-slate-900 text-white hover:bg-slate-800 transition-colors shadow-md">
           Demo
         </button>
       </nav>

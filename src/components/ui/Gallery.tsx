@@ -14,17 +14,17 @@ export function Gallery({ images, className }: GalleryProps) {
       {images.map((img, idx) => (
         <motion.div
           key={idx}
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ delay: idx * 0.15, duration: 0.8, ease: "easeOut" }}
           className={cn(
-            "relative group overflow-hidden rounded-2xl bg-[#0f172a]/90 backdrop-blur-md border border-slate-800 p-2 shadow-xl",
+            "relative group overflow-hidden rounded-2xl bg-white border border-slate-200 p-2 shadow-sm",
             img.span
           )}
         >
-          {/* Internal container to clip the scaling image without breaking the acrylic frame */}
-          <div className="relative w-full h-[320px] overflow-hidden rounded-xl bg-[#020617]">
+          {/* Image Container */}
+          <div className="relative w-full h-[320px] overflow-hidden rounded-xl bg-slate-100">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
               src={img.url} 

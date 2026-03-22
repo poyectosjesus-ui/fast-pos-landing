@@ -2,35 +2,38 @@
 
 import { motion } from "framer-motion";
 import { cn } from "./MagneticButton";
-import { InputHTMLAttributes, forwardRef } from "react";
+import React from "react";
 
-export interface GlassInputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface GlassInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
   icon?: React.ReactNode;
 }
 
-export const GlassInput = forwardRef<HTMLInputElement, GlassInputProps>(
-  ({ className, label, error, type, icon, ...props }, ref) => {
+export const GlassInput = React.forwardRef<HTMLInputElement, GlassInputProps>(
+  ({ className, label, error, icon, ...props }, ref) => {
     return (
-      <div className="flex flex-col gap-2 w-full group">
+      <div className="flex flex-col gap-2 relative w-full group">
         {label && (
-          <label className="text-sm font-medium text-slate-300 ml-1 group-focus-within:text-blue-400 transition-colors">
+          <label className="text-sm font-bold text-slate-600 ml-1 group-focus-within:text-blue-600 transition-colors uppercase tracking-widest">
             {label}
           </label>
         )}
         <div className="relative">
-          {icon}
+          {icon && (
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none z-10">
+              {icon}
+            </div>
+          )}
           <input
-            type={type}
+            ref={ref}
             className={cn(
-              "flex h-12 w-full rounded-xl border bg-black/40 px-4 py-2 text-sm text-white placeholder:text-slate-400 font-medium",
-              "border-white/10 focus:border-blue-500/70 focus:bg-black/60",
-              "transition-all duration-200 outline-none shadow-[inset_0_2px_4px_rgba(0,0,0,0.8)] focus:shadow-[inset_0_2px_4px_rgba(0,0,0,0.8),0_0_15px_rgba(37,99,235,0.3)]",
-              error && "border-red-500/70 focus:border-red-500/70 focus:shadow-[inset_0_2px_4px_rgba(0,0,0,0.8),0_0_15px_rgba(239,68,68,0.3)]",
+              "flex h-12 w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-400 font-medium",
+              "focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all",
+              "shadow-sm",
+              icon && "pl-10",
               className
             )}
-            ref={ref}
             {...props}
           />
           {/* Top edge highlight for 3D realism */}

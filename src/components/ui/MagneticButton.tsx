@@ -37,8 +37,8 @@ export function MagneticButton({
 
   const variants = {
     primary: "bg-blue-600 text-white shadow-[0_4px_14px_rgba(37,99,235,0.4),inset_0_1px_0_rgba(255,255,255,0.2)] hover:bg-blue-500 hover:shadow-[0_6px_20px_rgba(37,99,235,0.5),inset_0_1px_0_rgba(255,255,255,0.3)] border border-blue-500",
-    secondary: "bg-[#1e293b] border border-slate-700 text-white shadow-sm hover:bg-slate-800 hover:border-slate-600",
-    outline: "border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800/50 hover:border-slate-600",
+    secondary: "bg-white border border-slate-200 text-slate-900 shadow-sm hover:bg-slate-50 hover:border-slate-300",
+    outline: "border-2 border-slate-200 text-slate-600 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50/50",
   };
 
   return (

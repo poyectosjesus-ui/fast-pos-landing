@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "./MagneticButton";
 
 interface AnimatedTextRevealProps {
@@ -12,42 +12,46 @@ interface AnimatedTextRevealProps {
 export function AnimatedTextReveal({ text, className, delay = 0 }: AnimatedTextRevealProps) {
   const words = text.split(" ");
 
-  const container: Variants = {
+  const container = {
     hidden: { opacity: 0 },
-    visible: (i: number = 1) => ({
+    visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.08, delayChildren: delay * i },
+      transition: { staggerChildren: 0.1, delayChildren: delay * 0.1 },
     }),
   };
 
-  const child: Variants = {
+  const child = {
     visible: {
       opacity: 1,
       y: 0,
       filter: "blur(0px)",
-      transition: { type: "spring", damping: 12, stiffness: 100 },
+      transition: {
+        type: "spring" as const,
+        damping: 12,
+        stiffness: 100,
+      },
     },
     hidden: {
       opacity: 0,
       y: 20,
-      filter: "blur(4px)",
-      transition: { type: "spring", damping: 12, stiffness: 100 },
+      filter: "blur(10px)",
     },
   };
 
   return (
-    <motion.h2
+    <motion.div
+      style={{ overflow: "hidden", display: "flex" }}
       variants={container}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
-      className={cn("flex flex-wrap text-4xl font-bold tracking-tight text-white", className)}
+      viewport={{ once: true, margin: "-100px" }}
+      className={cn("flex flex-wrap text-4xl font-bold tracking-tight text-slate-900", className)}
     >
       {words.map((word, index) => (
-        <motion.span variants={child} key={index} className="mr-[0.25em]">
+        <motion.span variants={child} key={index} className="mr-3">
           {word}
         </motion.span>
       ))}
-    </motion.h2>
+    </motion.div>
   );
 }

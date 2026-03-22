@@ -11,26 +11,21 @@ interface GlowBadgeProps {
 
 export function GlowBadge({ children, variant = "blue", className }: GlowBadgeProps) {
   const variants = {
-    blue: "text-blue-400 bg-blue-500/10 border-blue-500/30",
-    purple: "text-purple-400 bg-purple-500/10 border-purple-500/30",
-    green: "text-green-400 bg-green-500/10 border-green-500/30",
-    glass: "text-slate-300 bg-white/[0.03] border-white/10 backdrop-blur-md",
+    blue: "text-blue-700 bg-blue-100/50 border-blue-200 shadow-[0_0_15px_rgba(59,130,246,0.1)]",
+    purple: "text-purple-700 bg-purple-100/50 border-purple-200 shadow-[0_0_15px_rgba(168,85,247,0.1)]",
+    green: "text-emerald-700 bg-emerald-100/50 border-emerald-200 shadow-[0_0_15px_rgba(16,185,129,0.1)]",
+    glass: "text-slate-700 bg-white/50 border-slate-200 backdrop-blur-md shadow-sm",
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ type: "spring", stiffness: 200, damping: 20 }}
-      viewport={{ once: true }}
+    <div
       className={cn(
-        "relative inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider border",
+        "inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border transition-all duration-300",
         variants[variant],
         className
       )}
     >
       <span className="relative z-10 flex items-center gap-1.5">
-        {/* Subtle dot indicator */}
         <span className={cn(
           "w-1.5 h-1.5 rounded-full animate-pulse",
           variant === "blue" ? "bg-blue-400" :
@@ -39,6 +34,6 @@ export function GlowBadge({ children, variant = "blue", className }: GlowBadgePr
         )} />
         {children}
       </span>
-    </motion.div>
+    </div>
   );
 }

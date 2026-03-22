@@ -28,57 +28,69 @@ export function Hero() {
           <div className="absolute inset-0 bg-blue-600/10 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
         </motion.div>
 
-        <motion.h2
+        <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-3xl md:text-5xl text-white font-bold tracking-tight mb-8"
+          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          className="text-lg md:text-2xl text-slate-600 font-medium max-w-2xl leading-relaxed mb-6"
         >
-          Vende Más • Cobra Rápido • Controla Todo
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-xl md:text-2xl text-slate-400 max-w-2xl font-medium tracking-wide leading-relaxed"
-        >
-          Tu sistema de ventas más simple y potente.
+          Tu sistema de ventas más simple y potente. Creado específicamente para agilizar abarrotes y negocios de mostrador.
         </motion.p>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-12 flex flex-col sm:flex-row gap-6 items-center"
+          className="mt-8 flex flex-col sm:flex-row gap-6 items-center"
         >
-          <MagneticButton variant="primary" className="flex items-center justify-center text-lg px-10 py-5 font-bold uppercase tracking-wide w-full sm:w-auto">
+          <MagneticButton variant="primary" className="flex items-center justify-center text-lg px-10 py-5 font-bold uppercase tracking-wide w-full sm:w-auto z-10 shadow-lg shadow-blue-500/20">
             Agendar Cita Ahora
           </MagneticButton>
         </motion.div>
 
-        {/* Software Interface Mockup Trailer */}
+        {/* Software Interface Mockup Trailer with Image inside */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-20 w-full max-w-5xl relative z-10"
+        >
+          <div className="absolute -inset-1 bg-gradient-to-t from-blue-300/40 to-transparent blur-[80px] rounded-full pointer-events-none" />
+          <div className="relative w-full aspect-[16/10] md:aspect-[21/9] rounded-2xl bg-white border border-slate-200 shadow-2xl overflow-hidden flex flex-col ring-1 ring-slate-900/5">
+            {/* Native Window Title Bar */}
+            <div className="h-10 border-b border-slate-200 bg-slate-50 flex items-center px-4 justify-between select-none">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-amber-400" />
+                <div className="w-3 h-3 rounded-full bg-emerald-400" />
+              </div>
+              <div className="text-[10px] font-bold tracking-widest text-slate-400 uppercase">Punto de Venta / Terminal Ocular</div>
+              <div className="w-10"></div>
+            </div>
+            {/* Body of mock window matching a real POS usage context */}
+            <div className="flex-1 w-full bg-slate-100 relative overflow-hidden">
+               <img 
+                 src="https://images.unsplash.com/photo-1556740749887-f25b7a11dfa4?auto=format&fit=crop&q=80&w=1200" 
+                 alt="Software de caja en acción" 
+                 className="absolute inset-0 w-full h-full object-cover opacity-90"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-8">
+                  <div className="text-white text-left">
+                     <h3 className="text-2xl font-bold mb-2">Cobros en Segundos</h3>
+                     <p className="text-slate-200 font-medium">Olvídate de las calculadoras y los errores humanos.</p>
+                  </div>
+               </div>
+            </div>
+          </div>
+        </motion.div>
+        {/* Security Trailer text */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-24 w-full relative"
+          transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-8 text-slate-500 font-medium text-sm"
         >
-          {/* Hardware Frame */}
-          <div className="rounded-t-2xl border border-slate-800 bg-[#0f172a]/90 backdrop-blur-xl p-4 shadow-[0_-20px_80px_rgba(37,99,235,0.15)] mx-auto max-w-5xl">
-            {/* Mac-style Window Controls Base */}
-            <div className="flex gap-2 mb-4 px-2">
-              <div className="w-3 h-3 rounded-full bg-slate-700/80" />
-              <div className="w-3 h-3 rounded-full bg-slate-700/80" />
-              <div className="w-3 h-3 rounded-full bg-slate-700/80" />
-            </div>
-            {/* Screen Content Wrapper */}
-            <div className="h-[40vh] min-h-[400px] rounded-xl bg-[#020617] border border-slate-800 flex items-center justify-center relative overflow-hidden">
-               {/* Grid Texture inside the screen */}
-               <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:32px_32px]"></div>
-               <span className="text-slate-600 font-mono text-sm tracking-widest uppercase z-10 bg-[#020617] px-4 py-2 border border-slate-800 rounded-lg">Interfaz Táctica de Ventas</span>
-            </div>
-          </div>
+          No requiere internet para cobrar. 100% Seguro.
         </motion.div>
       </div>
     </section>

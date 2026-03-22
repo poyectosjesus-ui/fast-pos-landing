@@ -4,27 +4,26 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export function AnimatedBackground() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return <div className="fixed inset-0 bg-[#020617] -z-50" />;
-
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none -z-50 bg-[#020617]">
-      {/* Absolute dark base to ensure stability */}
-      <div className="absolute inset-0 bg-[#020617]" />
-
-      {/* Structural Grid representing precision and engineering */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_0%,#000_80%,transparent_100%)]"></div>
+    <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10 bg-slate-50">
+      {/* Soft Light Mode Ambient Glows \*/}
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-400/10 rounded-full blur-[120px] mix-blend-multiply" />
+      <div className="absolute top-[20%] right-[-10%] w-[35%] h-[40%] bg-indigo-400/10 rounded-full blur-[100px] mix-blend-multiply" />
+      <div className="absolute bottom-[-10%] left-[20%] w-[40%] h-[40%] bg-blue-300/10 rounded-full blur-[120px] mix-blend-multiply" />
       
-      {/* 
-        Single, extremely subtle, immense deep-blue ambient light to prevent absolute darkness 
-        while remaining strictly professional. No moving party orbs.
-      */}
-      <div className="absolute top-[-20%] left-[10%] w-[80vw] h-[80vw] max-w-[1200px] max-h-[1200px] rounded-full bg-blue-900/10 blur-[150px] mix-blend-screen" />
+      {/* Subtle Light Structural Grid */}
+      <div 
+        className="absolute inset-0 opacity-[0.4]"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(148, 163, 184, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '4rem 4rem',
+          maskImage: 'radial-gradient(ellipse 60% 60% at 50% 50%, #000 20%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 60% 60% at 50% 50%, #000 20%, transparent 100%)'
+        }}
+      />
     </div>
   );
 }

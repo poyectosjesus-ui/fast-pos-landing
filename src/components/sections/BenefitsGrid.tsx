@@ -5,37 +5,58 @@ import { FeatureCard } from "../ui/FeatureCard";
 import { IconTrendingUp, IconClock, IconCash, IconDeviceMobile, IconLock, IconUsers } from "@tabler/icons-react";
 
 const benefits = [
-  { icon: <IconTrendingUp className="text-blue-400" />, title: "Vende 40% Más Rápido", desc: "Procesa más ventas en menos tiempo. Más clientes felices. Más dinero en tu caja." },
-  { icon: <IconClock className="text-blue-400" />, title: "Ahorra 2 Horas Diarias", desc: "Sin contar billetes, sin anotar en cuadernos, sin errores. Tiempo para lo que realmente importa." },
-  { icon: <IconCash className="text-blue-400" />, title: "Dinero que No Veías", desc: "Sabe exactamente cuánto vendiste, cuánto ganaste y qué productos son los que realmente dan dinero." },
-  { icon: <IconDeviceMobile className="text-blue-400" />, title: "Control Total en Tu Móvil", desc: "Estés donde estés, ves tu caja en tiempo real. Tu negocio siempre en tu bolsillo. Control total." },
-  { icon: <IconLock className="text-blue-400" />, title: "Adiós a Descuadres", desc: "Todo queda registrado automáticamente. Adiós a misterios de 'dónde se fue el dinero'. Todo claro." },
-  { icon: <IconUsers className="text-blue-400" />, title: "Fiados Sin Sustos", desc: "Sabe quién te debe, cuánto debe y desde cuándo. Cobra deudas fácilmente. Sin olvidar nada." },
+  { icon: <IconTrendingUp className="text-blue-600" />, title: "Vende 40% Más Rápido", description: "Procesa más ventas en menos tiempo. Más clientes felices. Más dinero en tu caja." },
+  { icon: <IconClock className="text-blue-600" />, title: "Ahorra 2 Horas Diarias", description: "Sin contar billetes, sin anotar en cuadernos, sin errores. Tiempo para lo que realmente importa." },
+  { icon: <IconCash className="text-blue-600" />, title: "Dinero que No Veías", description: "Sabe exactamente cuánto vendiste, cuánto ganaste y qué productos son los que realmente dan dinero." },
+  { icon: <IconDeviceMobile className="text-blue-600" />, title: "Control Total en Tu Móvil", description: "Estés donde estés, ves tu caja en tiempo real. Tu negocio siempre en tu bolsillo. Control total." },
+  { icon: <IconLock className="text-blue-600" />, title: "Adiós a Descuadres", description: "Todo queda registrado automáticamente. Adiós a misterios de 'dónde se fue el dinero'. Todo claro." },
+  { icon: <IconUsers className="text-blue-600" />, title: "Fiados Sin Sustos", description: "Sabe quién te debe, cuánto debe y desde cuándo. Cobra deudas fácilmente. Sin olvidar nada." },
 ];
 
 export function BenefitsGrid() {
   return (
-    <section className="relative w-full max-w-6xl mx-auto px-6 py-24">
-      <div className="text-center mb-16">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4"
-        >
-          Qué Ganas Tú Con FAST POS
-        </motion.h2>
-      </div>
+    <section className="relative w-full max-w-6xl mx-auto px-6 py-32 z-10">
+      
+      <div className="flex flex-col lg:flex-row gap-16 items-center">
+        {/* Left Text and Image Combo */}
+        <div className="w-full lg:w-1/3 flex flex-col gap-8">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-6">
+              Qué ganas tú con <span className="text-blue-600">FAST POS</span>
+            </h2>
+            <p className="text-lg text-slate-600 font-medium leading-relaxed">
+              No es solo software. <strong>Es tiempo y dinero de regreso en tu bolsillo.</strong> Un cajero empoderado es un negocio que florece.
+            </p>
+          </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {benefits.map((benefit, i) => (
-          <FeatureCard 
-            key={i}
-            icon={benefit.icon}
-            title={benefit.title}
-            description={benefit.desc}
-          />
-        ))}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border border-slate-200"
+          >
+             <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800" alt="Dueño de tienda feliz" className="w-full h-full object-cover" />
+          </motion.div>
+        </div>
+
+        {/* Right Feature Grid */}
+        <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {benefits.map((benefit, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+            >
+              <FeatureCard {...benefit} className="h-full bg-white border-slate-200 shadow-sm" />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -10,13 +10,13 @@ export function SocialProof() {
   ];
 
   return (
-    <section className="relative w-full border-y border-blue-500/10 bg-blue-500/[0.02] py-24 my-12 overflow-hidden">
+    <section className="relative w-full border-y border-blue-100 bg-blue-50/50 py-24 my-12 overflow-hidden shadow-sm">
       {/* Background glow for this specific section */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-64 bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl h-64 bg-blue-400/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-16">
-          Por Qué Confiar en FAST POS
+        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-16">
+          Por Qué Confiar en <span className="text-blue-600">FAST POS</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
@@ -29,10 +29,10 @@ export function SocialProof() {
               viewport={{ once: true }}
               className="flex flex-col items-center"
             >
-              <div className="text-5xl md:text-7xl font-bold tracking-tighter text-blue-400 mb-4 drop-shadow-[0_0_20px_rgba(96,165,250,0.3)]">
+               <div className="text-5xl md:text-7xl font-black tracking-tighter text-blue-600 mb-4 drop-shadow-sm">
                 {stat.value}
               </div>
-              <div className="text-lg font-medium text-slate-400 max-w-[200px]">
+              <div className="text-lg font-bold text-slate-600 max-w-[200px] leading-tight">
                 {stat.label}
               </div>
             </motion.div>
@@ -44,7 +44,7 @@ export function SocialProof() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed"
+          className="text-xl md:text-2xl text-slate-700 max-w-3xl mx-auto font-medium leading-relaxed"
         >
           Restaurantes, tiendas, farmacias, mercadillos y pequeños negocios de Pachuca y zona ya venden sin errores con FAST POS. ¿Por qué no tú?
         </motion.p>

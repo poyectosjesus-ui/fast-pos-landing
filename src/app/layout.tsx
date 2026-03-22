@@ -29,7 +29,7 @@ export default function RootLayout({
       lang="en"
       className="dark"
     >
-      <body className="bg-[#020617] text-white min-h-screen selection:bg-indigo-500/30">
+      <body className="bg-slate-50 text-slate-900 min-h-screen selection:bg-blue-500/30 text-shadow-sm font-sans mx-auto overflow-x-hidden antialiased">
         <CursorTrailer />
         {children}
       </body>
