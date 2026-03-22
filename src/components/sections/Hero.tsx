@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MagneticButton } from "../ui/MagneticButton";
 import { GlowBadge } from "../ui/GlowBadge";
 import { IconDeviceDesktop, IconBolt } from "@tabler/icons-react";
+import { siteConfig } from "@/config/site";
 
 export function Hero() {
   return (
@@ -43,7 +44,11 @@ export function Hero() {
           transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="mt-8 flex flex-col sm:flex-row gap-6 items-center"
         >
-          <MagneticButton variant="primary" className="flex items-center justify-center text-lg px-10 py-5 font-bold uppercase tracking-wide w-full sm:w-auto z-10 shadow-lg shadow-blue-500/20">
+          <MagneticButton 
+            variant="primary" 
+            onClick={() => window.open(siteConfig.links.whatsappSalesUrl, '_blank')}
+            className="flex items-center justify-center text-lg px-10 py-5 font-bold uppercase tracking-wide w-full sm:w-auto z-10 shadow-lg shadow-blue-500/20"
+          >
             Agendar Cita Ahora
           </MagneticButton>
         </motion.div>

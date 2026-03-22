@@ -26,8 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className="dark"
+      lang="es"
+      className="scroll-smooth"
     >
       <body className="bg-slate-50 text-slate-900 min-h-screen selection:bg-blue-500/30 text-shadow-sm font-sans mx-auto overflow-x-hidden antialiased">
         <CursorTrailer />

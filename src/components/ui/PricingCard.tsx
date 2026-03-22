@@ -9,9 +9,10 @@ interface PricingCardProps {
   features: string[];
   isPopular?: boolean;
   buttonText?: string;
+  onAction?: () => void;
 }
 
-export function PricingCard({ title, price, period, features, isPopular, buttonText }: PricingCardProps) {
+export function PricingCard({ title, price, period, features, isPopular, buttonText, onAction }: PricingCardProps) {
   return (
     <div className={cn(
       "relative p-8 rounded-2xl flex flex-col h-full overflow-hidden transition-all duration-300",
@@ -45,6 +46,7 @@ export function PricingCard({ title, price, period, features, isPopular, buttonT
 
       <MagneticButton 
         variant={isPopular ? "primary" : "secondary"} 
+        onClick={onAction}
         className="w-full text-center justify-center font-bold text-lg py-4 shadow-sm"
       >
         {buttonText || "Agendar Cita"}

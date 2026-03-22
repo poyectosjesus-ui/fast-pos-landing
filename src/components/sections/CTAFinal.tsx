@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { MagneticButton } from "../ui/MagneticButton";
+import { siteConfig } from "@/config/site";
 
 export function CTAFinal() {
   return (
@@ -28,7 +29,7 @@ export function CTAFinal() {
         >
           Tu negocio merece crecer. Sin complicaciones. Sin errores. Sin estrés.
         </motion.p>
-        
+
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}
@@ -37,13 +38,19 @@ export function CTAFinal() {
            className="relative group inline-flex flex-col items-center"
         >
           <div className="absolute -inset-2 bg-white rounded-full blur-md opacity-20 group-hover:opacity-40 transition duration-500" />
-          <MagneticButton variant="secondary" className="bg-white text-blue-700 hover:bg-slate-50 px-12 py-5 text-xl font-bold tracking-wide uppercase shadow-2xl z-10">
+          <MagneticButton 
+            variant="secondary" 
+            onClick={() => window.open(siteConfig.links.whatsappSalesUrl, '_blank')}
+            className="bg-white text-blue-700 hover:bg-slate-50 px-12 py-5 text-xl font-bold tracking-wide uppercase shadow-2xl z-10"
+          >
             AGENDAR CITA AHORA
           </MagneticButton>
           
           <p className="mt-8 text-sm text-blue-200 font-medium z-10">
-            O escríbeme directamente: <br/>
-            <a href="https://wa.me/527710000000" className="text-white hover:text-green-300 font-bold transition-colors">📱 WhatsApp: +52 771 XXXX XXXX</a>
+            O escríbeme directamente a WhatsApp: <br/>
+            <a href={siteConfig.links.whatsappSalesUrl} target="_blank" rel="noreferrer" className="text-white hover:text-green-300 font-bold transition-colors">
+              📱 +{siteConfig.contact.whatsappNumber}
+            </a>
           </p>
         </motion.div>
       </div>
