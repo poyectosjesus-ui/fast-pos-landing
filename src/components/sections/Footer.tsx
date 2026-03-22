@@ -17,11 +17,10 @@ export function Footer() {
 
         <div className="flex flex-col items-center gap-3 flex-1 md:items-end text-slate-600 font-medium">
           <a href={siteConfig.links.whatsappSalesUrl} target="_blank" rel="noreferrer" className="hover:text-blue-600 transition-colors">📱 WhatsApp: +{siteConfig.contact.whatsappNumber}</a>
-          <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-blue-600 transition-colors">📧 Email: {siteConfig.contact.email}</a>
-          <a href="https://www.fastpos.mx" className="hover:text-blue-600 transition-colors">🌐 Web: www.fastpos.mx</a>
+          <a href="https://novecientoszero.com" className="hover:text-blue-600 transition-colors">🌐 Web: www.novecientoszero.com</a>
         </div>
       </div>
-      
+
       <div className="max-w-6xl mx-auto flex flex-col items-center pt-8 border-t border-slate-200 text-sm text-slate-500 font-medium gap-2">
         <p>📍 Pachuca de Soto, Hidalgo | México</p>
         <p>© 2024 FAST POS - Todos los derechos reservados</p>

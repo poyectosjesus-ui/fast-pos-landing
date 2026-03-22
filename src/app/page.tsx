@@ -35,22 +35,26 @@ export default function Home() {
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
           <a href="#caracteristicas" className="hover:text-blue-600 transition-colors">Características</a>
           <a href="#inversion" className="hover:text-blue-600 transition-colors">Inversión</a>
-          <button 
-            onClick={() => window.open(siteConfig.links.whatsappSalesUrl, '_blank')}
+          <a 
+            href={siteConfig.links.whatsappSalesUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm font-bold px-6 py-2.5 rounded-xl bg-blue-600 text-white hover:bg-blue-500 transition-all shadow-md shadow-blue-500/20"
           >
             Comprar Ahora
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu CTA */}
         <div className="md:hidden flex items-center">
-          <button 
-            onClick={() => window.open(siteConfig.links.whatsappSalesUrl, '_blank')}
+          <a 
+            href={siteConfig.links.whatsappSalesUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-xs font-bold px-5 py-2.5 rounded-lg bg-blue-600 text-white active:scale-95 transition-all shadow-md shadow-blue-500/20"
           >
             Agendar Cita
-          </button>
+          </a>
         </div>
       </nav>
 
