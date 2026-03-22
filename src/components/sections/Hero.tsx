@@ -17,26 +17,33 @@ export function Hero() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="relative group cursor-default flex flex-col items-center"
         >
-          <GlowBadge variant="blue" className="mb-10">Fast POS v2.0 • 100% Offline</GlowBadge>
-
           {/* Main title */}
-          <h1 className="text-5xl sm:text-7xl md:text-[6rem] font-black tracking-tight text-white drop-shadow-2xl leading-[1.1] mb-8">
-            El Punto de Venta <br />
+          <h1 className="text-6xl sm:text-8xl md:text-[8rem] font-black tracking-tight text-white drop-shadow-2xl leading-[1.1] mb-6">
+            FAST
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-              Inmune a Caídas
+              POS
             </span>
           </h1>
           {/* Hover glow behind text */}
           <div className="absolute inset-0 bg-blue-600/10 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
         </motion.div>
 
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="text-3xl md:text-5xl text-white font-bold tracking-tight mb-8"
+        >
+          Vende Más • Cobra Rápido • Controla Todo
+        </motion.h2>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-xl md:text-2xl text-slate-400 max-w-3xl font-medium tracking-wide leading-relaxed"
+          className="text-xl md:text-2xl text-slate-400 max-w-2xl font-medium tracking-wide leading-relaxed"
         >
-          Software de escritorio ultrarrápido para abarrotes y retail. Adiós a las rentas mensuales y la dependencia de internet. <strong className="text-slate-200 font-semibold">Instala, conecta tu hardware y cobra en milisegundos.</strong>
+          Tu sistema de ventas más simple y potente.
         </motion.p>
         
         <motion.div
@@ -45,13 +52,8 @@ export function Hero() {
           transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="mt-12 flex flex-col sm:flex-row gap-6 items-center"
         >
-          <MagneticButton variant="primary" className="flex items-center gap-2 text-lg px-8 py-4">
-            <IconDeviceDesktop className="w-6 h-6" />
-            Descargar Instalador
-          </MagneticButton>
-          <MagneticButton variant="secondary" className="flex items-center gap-2 text-lg px-8 py-4">
-            <IconBolt className="w-6 h-6 text-blue-400" />
-            Explorar Funciones
+          <MagneticButton variant="primary" className="flex items-center justify-center text-lg px-10 py-5 font-bold uppercase tracking-wide w-full sm:w-auto">
+            Agendar Cita Ahora
           </MagneticButton>
         </motion.div>
 

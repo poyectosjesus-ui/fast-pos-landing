@@ -2,39 +2,42 @@
 
 import { motion } from "framer-motion";
 import { FeatureCard } from "../ui/FeatureCard";
-import { IconWifiOff, IconClockHour4, IconChartLine, IconAlertCircle } from "@tabler/icons-react";
+import { IconClockOff, IconEyeOff, IconHourglassEmpty, IconPackageOff, IconCashOff, IconFileOff } from "@tabler/icons-react";
 
 const problems = [
-  { icon: <IconWifiOff />, title: "Dependencia de Internet", desc: "Si falla tu proveedor o se va la luz, tu negocio entero se paraliza y no puedes cobrar.", col: "md:col-span-2" },
-  { icon: <IconClockHour4 />, title: "Cortes de Caja Lentos", desc: "Pierdes horas de sueño cuadrando números inexactos en la madrugada.", col: "md:col-span-1" },
-  { icon: <IconAlertCircle />, title: "Hardware Incompatible", desc: "Tu báscula digital o impresora térmica USB no es reconocida por sistemas web.", col: "md:col-span-1" },
-  { icon: <IconChartLine />, title: "Fuga de Inventario", desc: "Vendes a ciegas sin saber qué te falta o qué productos están mermando tu utilidad diaria.", col: "md:col-span-2" },
+  { icon: <IconClockOff className="text-slate-400" stroke={1.5} />, title: "Cierres Lentos", desc: "Pierdes 2 horas cerrando caja al final del día.", col: "md:col-span-1" },
+  { icon: <IconEyeOff className="text-slate-400" stroke={1.5} />, title: "Ceguera Financiera", desc: "Nunca sabes exactamente cuánto ganaste realmente.", col: "md:col-span-1" },
+  { icon: <IconHourglassEmpty className="text-slate-400" stroke={1.5} />, title: "Filas Eternas", desc: "Tus clientes se desesperan esperando mucho en la fila.", col: "md:col-span-1" },
+  { icon: <IconPackageOff className="text-slate-400" stroke={1.5} />, title: "Inventario Cero", desc: "No controlas bien tu mercancía y aparecen faltantes.", col: "md:col-span-1" },
+  { icon: <IconCashOff className="text-slate-400" stroke={1.5} />, title: "Dinero Perdido", desc: "El dinero no te cuadra y no sabes por qué.", col: "md:col-span-1" },
+  { icon: <IconFileOff className="text-slate-400" stroke={1.5} />, title: "Deudas Olvidadas", desc: "Olvidas cuánto crédito le diste a tus clientes.", col: "md:col-span-1" },
 ];
 
 export function BentoProblem() {
   return (
-    <section className="relative w-full max-w-5xl mx-auto px-6 py-24">
+    <section className="relative w-full max-w-6xl mx-auto px-6 py-24">
       <div className="text-center mb-16">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4"
+          className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6"
         >
-          ¿Tu sistema actual frena tus ventas?
+          ¿Te Pasa Esto en Tu Negocio?
         </motion.h2>
-        <motion.p 
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-slate-400 text-lg md:text-xl font-medium"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 font-medium text-lg"
         >
-          El internet inestable y el software de la nube están costándote dinero y clientes.
-        </motion.p>
+          <span>✓</span>
+          Lo bueno: Existe una solución. Y es más fácil de lo que crees.
+        </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {problems.map((prob, i) => (
           <FeatureCard 
             key={i}
