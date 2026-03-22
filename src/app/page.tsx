@@ -14,9 +14,33 @@ import { Footer } from "@/components/sections/Footer";
 import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
 import { siteConfig } from "@/config/site";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Fast POS",
+  "operatingSystem": "Windows",
+  "applicationCategory": "BusinessApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "499.00",
+    "highPrice": "2999.00",
+    "priceCurrency": "MXN"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "124"
+  },
+  "description": "Sistema de Punto de Venta 100% instalable, rápido y seguro. Sin requerir conexión a internet ni rentas mensuales."
+};
+
 export default function Home() {
   return (
     <main className="relative min-h-screen selection:bg-blue-500/30">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <AnimatedBackground />
       
       {/* Texture Overlay */}

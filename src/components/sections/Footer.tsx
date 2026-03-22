@@ -1,6 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -21,8 +22,17 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto flex flex-col items-center pt-8 border-t border-slate-200 text-sm text-slate-500 font-medium gap-2">
-        <p>📍 Pachuca de Soto, Hidalgo | México</p>
+      <div className="max-w-6xl mx-auto flex flex-col items-center pt-8 border-t border-slate-200 text-sm text-slate-500 font-medium gap-3">
+        <div className="flex items-center gap-6">
+          <Link href="/blog" className="text-slate-500 hover:text-blue-600 transition-colors underline underline-offset-4">
+            Blog & Recursos
+          </Link>
+          <span className="w-1 h-1 bg-slate-300 rounded-full" />
+          <Link href="/privacidad" className="text-slate-500 hover:text-blue-600 transition-colors underline underline-offset-4">
+            Aviso de Privacidad
+          </Link>
+        </div>
+        <p className="mt-2">📍 Pachuca de Soto, Hidalgo | México</p>
         <p>© 2024 FAST POS - Todos los derechos reservados</p>
       </div>
     </footer>

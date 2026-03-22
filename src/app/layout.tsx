@@ -13,10 +13,34 @@ const geistMono = Geist_Mono({
 });
 
 import { CursorTrailer } from "@/components/ui/CursorTrailer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Fast POS | The intelligent operating system for your business",
-  description: "A system that automates everything. No complications, no slow setups. Just pure speed and control with Deep Glassmorphism Design.",
+  metadataBase: new URL("https://novecientoszero.com"),
+  title: "Fast POS | Punto de Venta Local Sin Rentas Mensuales",
+  description: "Sistema de Punto de Venta rápido, seguro y 100% instalable en Pachuca. Olvídate de las rentas mensuales y de depender del internet para cobrar en tu negocio.",
+  openGraph: {
+    title: "Fast POS | Tu Punto de Venta Ideal",
+    description: "La alternativa definitiva para abarrotes: Cero Rentas y Funciona sin Internet. Administra cajeros, inventarios y sucursales.",
+    url: "https://novecientoszero.com",
+    siteName: "Fast POS México",
+    images: [
+      {
+        url: "/fastpos.png",
+        width: 1200,
+        height: 630,
+        alt: "Sistema Fast POS",
+      },
+    ],
+    locale: "es_MX",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fast POS | Punto de Venta Local Sin Rentas Mensuales",
+    description: "Sistema 100% instalable. Olvídate de las rentas mensuales.",
+    images: ["/fastpos.png"],
+  },
 };
 
 export default function RootLayout({
@@ -32,6 +56,7 @@ export default function RootLayout({
       <body className="bg-slate-50 text-slate-900 min-h-screen selection:bg-blue-500/30 text-shadow-sm font-sans mx-auto overflow-x-hidden antialiased">
         <CursorTrailer />
         {children}
+        <Analytics />
       </body>
     </html>
   );
