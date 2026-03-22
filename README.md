@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fast POS 2.0 - Landing Page 🚀
 
-## Getting Started
+Plataforma comercial y Landing Page de alta conversión diseñada para capturar, educar y convertir prospectos locales en clientes del software **Fast POS** (Sistema de Punto de Venta Local sin rentas).
 
-First, run the development server:
+## 🌟 Características Principales
+
+*   **Diseño Premium (Glassmorphism):** Interfaz de usuario hiper-moderna con efectos visuales de cristal esmerilado, luces ambientales de neón y animaciones fluidas impulsadas por Framer Motion.
+*   **Estrategia Psicológica de Precios (Decoy Pricing):** Sistema avanzado de 3 columnas (Base, Avanzada, Pro) diseñado para generar un fuerte anclaje de precios y forzar orgánicamente el volumen de ventas hacia el plan central ($1,299).
+*   **Motor Inbound Híbrido (Blog SEO):** Ecosistema nativo de contenidos (artículos educacionales) integrados en el App Router para interceptar tráfico de dueños de negocios con alta intención de compra.
+*   **SEO Técnico Blindado:** Inyección total de meta etiquetas OpenGraph para previsualizaciones premium en WhatsApp, `sitemap.ts`, `robots.ts` automatizados y marcadores enriquecidos JSON-LD (`SoftwareApplication`).
+*   **Conversión Móvil Optimizada:** Todos los embudos ("Call To Action") están blindados usando enlaces HTML nativos. Esto fuerza la apertura directa de la aplicación de WhatsApp sin ser interrumpidos por los bloqueadores de ventanas (Pop-Up blockers) intrínsecos de Safari iOS o las WebViews de Facebook.
+*   **Protección Legal (Meta Ads):** Ruta nativa de Aviso de Privacidad adaptada al mercado mexicano para cumplir con los requerimientos estrictos de las plataformas de tráfico de pago.
+
+## 🛠️ Arquitectura Técnica
+
+*   **Framework Core:** [Next.js 14/15 (App Router)](https://nextjs.org/)
+*   **Motor de Renderizado:** Turbopack
+*   **Tipado:** TypeScript
+*   **Estilos:** Tailwind CSS
+*   **Interacciones:** Framer Motion
+*   **Sistema de Íconos:** Tabler Icons React
+*   **Analíticas Globales:** Vercel Web Analytics (@vercel/analytics)
+
+## ⚙️ Entorno de Desarrollo (Local)
+
+Para correr la página web en tu máquina y modificar el diseño, sigue estos pasos:
+
+1. Clona el repositorio y asegúrate de estar en el directorio del proyecto.
+2. Instala las dependencias:
+
+```bash
+npm install
+# o con yarn
+yarn install
+```
+
+3. Inicia el servidor de desarrollo ultrarrápido:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador favorito. El sistema soporta recarga rápida (HMR).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Despliegue en Producción (Vercel)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Este proyecto está optimizado milimétricamente para ser desplegado en **Vercel** de manera gratuita.
 
-## Learn More
+1. Sube tu código a un repositorio de GitHub privado.
+2. Ingresa a [Vercel.com](https://vercel.com/) y enlaza tu cuenta de GitHub.
+3. Importa este proyecto. Vercel detectará que es `Next.js` y configurará automáticamente los comandos de compilación.
+4. Presiona **Deploy**. 
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Las métricas de Vercel Analytics se activarán instantáneamente al detectar tráfico real.
