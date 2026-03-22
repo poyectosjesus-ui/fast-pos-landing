@@ -16,7 +16,7 @@ const benefits = [
 export function BenefitsGrid() {
   return (
     <section className="relative w-full max-w-6xl mx-auto px-6 py-32 z-10">
-      
+
       <div className="flex flex-col lg:flex-row gap-16 items-center">
         {/* Left Text and Image Combo */}
         <div className="w-full lg:w-1/3 flex flex-col gap-8">
@@ -39,7 +39,7 @@ export function BenefitsGrid() {
             viewport={{ once: true }}
             className="w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border border-slate-200"
           >
-             <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800" alt="Dueño de tienda feliz" className="w-full h-full object-cover" />
+            <img src="/happy-owner.png" alt="Dueño de tienda feliz" className="w-full h-full object-cover" />
           </motion.div>
         </div>
 

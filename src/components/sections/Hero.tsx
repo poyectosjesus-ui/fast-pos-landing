@@ -8,10 +8,10 @@ import { siteConfig } from "@/config/site";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16 md:pt-32 md:pb-20">
       
       {/* Main Content */}
-      <div className="z-10 text-center flex flex-col items-center px-4 w-full max-w-6xl mx-auto">
+      <div className="z-10 text-center flex flex-col items-center px-5 w-full max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -19,9 +19,9 @@ export function Hero() {
           className="relative group cursor-default flex flex-col items-center"
         >
           {/* Main title */}
-          <h1 className="text-6xl sm:text-8xl md:text-[8rem] font-black tracking-tight text-white drop-shadow-2xl leading-[1.1] mb-6">
+          <h1 className="text-5xl sm:text-7xl md:text-[8rem] font-black tracking-tight text-slate-900 drop-shadow-2xl leading-[1.1] mb-6">
             FAST
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">
               POS
             </span>
           </h1>
@@ -33,7 +33,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          className="text-lg md:text-2xl text-slate-600 font-medium max-w-2xl leading-relaxed mb-6"
+          className="text-base sm:text-lg md:text-2xl text-slate-600 font-medium max-w-2xl leading-relaxed mb-6 px-2"
         >
           Tu sistema de ventas más simple y potente. Creado específicamente para agilizar abarrotes y negocios de mostrador.
         </motion.p>
@@ -75,7 +75,7 @@ export function Hero() {
             {/* Body of mock window matching a real POS usage context */}
             <div className="flex-1 w-full bg-slate-100 relative overflow-hidden">
                <img 
-                 src="https://images.unsplash.com/photo-1556740749887-f25b7a11dfa4?auto=format&fit=crop&q=80&w=1200" 
+                 src="/hero-terminal-alt.png" 
                  alt="Software de caja en acción" 
                  className="absolute inset-0 w-full h-full object-cover opacity-90"
                />

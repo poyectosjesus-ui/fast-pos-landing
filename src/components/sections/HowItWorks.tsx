@@ -9,19 +9,19 @@ export function HowItWorks() {
       num: "1",
       title: "Escanea el Producto",
       desc: "Pasa el código de barras por el scanner. O busca el producto a mano. Sin complicaciones.",
-      img: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=600"
+      img: "/step1-scan.png"
     },
     {
       num: "2",
       title: "Selecciona Cómo Pagar",
       desc: "Efectivo, tarjeta, transferencia, fiado. El cliente elige. Tú cobras. Automático.",
-      img: "https://images.unsplash.com/photo-1556740749887-f25b7a11dfa4?auto=format&fit=crop&q=80&w=600"
+      img: "/step2-payment-alt.png"
     },
     {
       num: "3",
       title: "Listo - Venta Guardada",
-      desc: "Recibo impreso o por WhatsApp. Todo quedó registrado. Venta completada. Siguiente cliente.",
-      img: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=600"
+      desc: "Ticket impreso al instante para tu cliente. Todo quedó registrado. ¡Siguiente turno!",
+      img: "/step3-receipt.png"
     },
   ];
 
@@ -29,7 +29,7 @@ export function HowItWorks() {
     <section className="relative w-full border-y border-slate-200 bg-slate-100 overflow-hidden shadow-inner">
       <div className="max-w-6xl mx-auto px-6 py-24 relative z-10">
         <div className="text-center mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -55,8 +55,8 @@ export function HowItWorks() {
           {steps.map((step, i) => (
             <GlassCard key={i} className="relative z-10 w-full md:w-1/3 flex flex-col items-center text-center group bg-white shadow-sm border-slate-200 p-0 overflow-hidden">
               <div className="w-full h-48 overflow-hidden relative">
-                 <img src={step.img} alt={step.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                 <div className="absolute inset-0 bg-slate-900/10" />
+                <img src={step.img} alt={step.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-slate-900/10" />
               </div>
               <div className="p-8 flex flex-col items-center">
                 <motion.div

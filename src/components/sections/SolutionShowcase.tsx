@@ -7,10 +7,9 @@ import { IconBolt, IconDeviceMobile, IconShieldCheck } from "@tabler/icons-react
 
 export function SolutionShowcase() {
   const localStockImages = [
-    { url: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200", alt: "Mercado local y abarrotes", span: "md:col-span-2" },
-    { url: "https://images.unsplash.com/photo-1556740749887-f25b7a11dfa4?auto=format&fit=crop&q=80&w=800", alt: "Terminal de cobro con tarjeta" },
-    { url: "https://images.unsplash.com/photo-1556741533-6e118e5b61e2?auto=format&fit=crop&q=80&w=800", alt: "Pantalla táctil de Punto de Venta" },
-    { url: "https://images.unsplash.com/photo-1647427017458-f6df91d046eb?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0", alt: "Operación de retail", span: "md:col-span-2" },
+    { url: "/happy-owner-alt.png", alt: "Dueño de negocio usando Fast POS", span: "md:col-span-2" },
+    { url: "/hero-terminal-alt.png", alt: "Terminal de cobro", span: "md:col-span-1" },
+    { url: "/chaos-counter-alt.png", alt: "Pantalla táctil y operación manual", span: "md:col-span-1" },
   ];
 
   return (
@@ -43,7 +42,7 @@ export function SolutionShowcase() {
           {/* Card 1 */}
           <GlassCard className="group relative shadow-sm border-slate-200 bg-white overflow-hidden p-0">
             <div className="h-40 w-full overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="/step1-scan-alt.png" alt="Barista tomando orden" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"/>
             </div>
             <div className="p-8">
@@ -60,7 +59,7 @@ export function SolutionShowcase() {
           {/* Card 2 */}
           <GlassCard className="group relative shadow-sm border-slate-200 bg-white overflow-hidden p-0">
             <div className="h-40 w-full overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1556740749887-f25b7a11dfa4?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="/happy-owner-alt.png" alt="Dueño en su móvil" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"/>
             </div>
             <div className="p-8">
@@ -78,7 +77,7 @@ export function SolutionShowcase() {
           {/* Card 3 */}
           <GlassCard className="group relative shadow-sm border-slate-200 bg-white overflow-hidden p-0">
             <div className="h-40 w-full overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1556741533-6e118e5b61e2?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="/hero-terminal-alt.png" alt="Terminal de cobro" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"/>
             </div>
             <div className="p-8">

@@ -6,9 +6,9 @@ import { siteConfig } from "@/config/site";
 
 export function CTAFinal() {
   return (
-    <section className="relative w-full max-w-5xl mx-auto px-6 py-32 mt-12 mb-20 overflow-hidden rounded-[3rem] shadow-2xl bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900">
-      {/* Intense animated gradient mesh background inside the CTA */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/10 blur-[100px] rounded-full mix-blend-overlay animate-blob pointer-events-none" />
+    <section className="relative w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] lg:w-full max-w-5xl mx-auto px-6 py-20 md:py-32 mt-12 mb-20 overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-slate-200/60 bg-white/60 backdrop-blur-3xl">
+      {/* Subtle blue ambient light inside the CTA */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[100px] rounded-full mix-blend-multiply animate-blob pointer-events-none" />
 
       <div className="relative z-10 flex flex-col items-center text-center">
         <motion.h2 
@@ -16,7 +16,7 @@ export function CTAFinal() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-black tracking-tight text-white mb-8 drop-shadow-md"
+          className="text-4xl md:text-7xl font-black tracking-tight text-slate-900 mb-6 md:mb-8 drop-shadow-sm"
         >
           ¿Listo para Vender Más?
         </motion.h2>
@@ -25,7 +25,7 @@ export function CTAFinal() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-xl md:text-2xl text-blue-100 max-w-2xl font-medium mb-12 drop-shadow-sm"
+          className="text-lg md:text-2xl text-slate-600 max-w-2xl font-medium mb-12"
         >
           Tu negocio merece crecer. Sin complicaciones. Sin errores. Sin estrés.
         </motion.p>
@@ -37,18 +37,18 @@ export function CTAFinal() {
            viewport={{ once: true }}
            className="relative group inline-flex flex-col items-center"
         >
-          <div className="absolute -inset-2 bg-white rounded-full blur-md opacity-20 group-hover:opacity-40 transition duration-500" />
+          <div className="absolute -inset-2 bg-blue-600 rounded-full blur-md opacity-20 group-hover:opacity-40 transition duration-500" />
           <MagneticButton 
-            variant="secondary" 
+            variant="primary" 
             onClick={() => window.open(siteConfig.links.whatsappSalesUrl, '_blank')}
-            className="bg-white text-blue-700 hover:bg-slate-50 px-12 py-5 text-xl font-bold tracking-wide uppercase shadow-2xl z-10"
+            className="px-8 py-4 md:px-12 md:py-5 text-lg md:text-xl font-bold tracking-wide uppercase shadow-xl z-10"
           >
             AGENDAR CITA AHORA
           </MagneticButton>
           
-          <p className="mt-8 text-sm text-blue-200 font-medium z-10">
+          <p className="mt-8 text-sm text-slate-500 font-medium z-10">
             O escríbeme directamente a WhatsApp: <br/>
-            <a href={siteConfig.links.whatsappSalesUrl} target="_blank" rel="noreferrer" className="text-white hover:text-green-300 font-bold transition-colors">
+            <a href={siteConfig.links.whatsappSalesUrl} target="_blank" rel="noreferrer" className="text-slate-800 hover:text-blue-600 font-bold transition-colors">
               📱 +{siteConfig.contact.whatsappNumber}
             </a>
           </p>

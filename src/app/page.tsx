@@ -26,10 +26,12 @@ export default function Home() {
       ></div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 px-8 py-4 flex justify-between items-center bg-white/80 backdrop-blur-xl border-b border-slate-200/80 shadow-sm">
-        <div className="text-2xl font-black tracking-tight text-slate-900">
+      <nav className="fixed top-0 w-full z-50 px-5 md:px-8 py-4 flex justify-between items-center bg-white/80 backdrop-blur-xl border-b border-slate-200/80 shadow-sm">
+        <div className="text-xl md:text-2xl font-black tracking-tight text-slate-900">
           FAST<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">POS</span>
         </div>
+        
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
           <a href="#caracteristicas" className="hover:text-blue-600 transition-colors">Características</a>
           <a href="#inversion" className="hover:text-blue-600 transition-colors">Inversión</a>
@@ -40,6 +42,16 @@ export default function Home() {
             Comprar Ahora
           </button>
         </div>
+
+        {/* Mobile Menu CTA */}
+        <div className="md:hidden flex items-center">
+          <button 
+            onClick={() => window.open(siteConfig.links.whatsappSalesUrl, '_blank')}
+            className="text-xs font-bold px-5 py-2.5 rounded-lg bg-blue-600 text-white active:scale-95 transition-all shadow-md shadow-blue-500/20"
+          >
+            Agendar Cita
+          </button>
+        </div>
       </nav>
 
       {/* Sections */}
@@ -47,7 +59,7 @@ export default function Home() {
         <Hero />
         <div id="caracteristicas" className="flex flex-col gap-20 pt-20 -mt-20">
           <BentoProblem />
-          <SolutionShowcase />
+          {/* <SolutionShowcase /> - Comentado temporalmente por ser confuso visualmente */}
           <BenefitsGrid />
           <HowItWorks />
         </div>

@@ -1,5 +1,7 @@
 "use client";
 
+import { siteConfig } from "@/config/site";
+
 export function Footer() {
   return (
     <footer className="relative w-full border-t border-slate-200 bg-slate-50 pt-16 pb-12 px-8 z-10 text-center md:text-left">
@@ -13,9 +15,9 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-3 flex-1 md:items-end text-slate-600 font-medium">
-          <a href="https://wa.me/527710000000" className="hover:text-blue-600 transition-colors">📱 WhatsApp: +52 771 XXXX XXXX</a>
-          <a href="mailto:info@fastpos.mx" className="hover:text-blue-600 transition-colors">📧 Email: info@fastpos.mx</a>
+        <div className="flex flex-col items-center gap-3 flex-1 md:items-end text-slate-600 font-medium">
+          <a href={siteConfig.links.whatsappSalesUrl} target="_blank" rel="noreferrer" className="hover:text-blue-600 transition-colors">📱 WhatsApp: +{siteConfig.contact.whatsappNumber}</a>
+          <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-blue-600 transition-colors">📧 Email: {siteConfig.contact.email}</a>
           <a href="https://www.fastpos.mx" className="hover:text-blue-600 transition-colors">🌐 Web: www.fastpos.mx</a>
         </div>
       </div>

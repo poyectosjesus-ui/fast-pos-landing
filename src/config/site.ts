@@ -5,15 +5,15 @@ export const siteConfig = {
   },
   links: {
     get whatsappSalesUrl() {
-      const message = "Hola, estoy en la página de Fast POS y me gustaría agendar una demostración o adquirir una licencia.";
+      const message = "Hola! 👋 Vengo de su página web. Me gustaría recibir más información de Fast POS o agendar una cita rápida para ver cómo funciona el sistema.";
       return `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
     },
     get whatsappProLicenseUrl() {
-       const message = "Hola, me interesa adquirir la Licencia Pro de Fast POS con 1 año de actualizaciones.";
+       const message = "Hola! 👋 Vengo de la página web. Me interesa adquirir la *Licencia Pro + Actualizaciones* de Fast POS. ¿Cuáles son los siguientes pasos?";
        return `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
     },
     get whatsappBaseLicenseUrl() {
-       const message = "Hola, me interesa adquirir la Licencia Base de Fast POS de pago único.";
+       const message = "Hola! 👋 Vengo de la página web. Me interesa adquirir la *Licencia Base* de pago único de Fast POS. ¿Me pueden dar más información?";
        return `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
     }
   }
