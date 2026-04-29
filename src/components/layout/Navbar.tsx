@@ -14,7 +14,7 @@ export function Navbar() {
       </Link>
       
       {/* Desktop Menu */}
-      <div className="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600">
+      <div className="hidden xl:flex items-center gap-6 text-sm font-semibold text-slate-600">
         <div className="relative group">
           <button className="hover:text-blue-600 py-2">Producto</button>
           <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-slate-100 shadow-xl rounded-xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all flex flex-col overflow-hidden">
@@ -57,9 +57,9 @@ export function Navbar() {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="lg:hidden flex items-center gap-4 z-50">
-        <button onClick={() => setIsOpen(!isOpen)} className="text-slate-600 p-2">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="xl:hidden flex items-center gap-4 z-50">
+        <button onClick={() => setIsOpen(!isOpen)} className="text-slate-900 p-2 relative z-[60]">
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
           </svg>
         </button>
@@ -67,7 +67,7 @@ export function Navbar() {
 
       {/* Mobile Menu Fullscreen Dropdown */}
       {isOpen && (
-        <div className="fixed inset-0 top-[72px] bg-white z-40 overflow-y-auto pb-20">
+        <div className="fixed inset-0 top-[72px] bg-white z-[45] overflow-y-auto pb-20">
           <div className="flex flex-col px-6 pt-6 gap-6">
             
             <div>

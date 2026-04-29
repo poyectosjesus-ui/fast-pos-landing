@@ -22,7 +22,7 @@ export default function AppMovilPage() {
             <span>Exclusivo del Plan Cloud Pro</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight mb-6 drop-shadow-sm">
-            Tu negocio entero, <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-500">en tu bolsillo.</span>
+            Tu negocio entero, <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-500">en tu bolsillo.</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-medium">
             Vete de vacaciones con total tranquilidad. Mientras tu cajero sigue cobrando offline, nuestro motor híbrido envía silenciosamente cada ticket a la nube en cuanto detecta internet.
@@ -33,23 +33,23 @@ export default function AppMovilPage() {
             </a>
           </div>
         </div>
-        
+
         <div className="w-full md:w-1/2 relative flex justify-center group">
           {/* Intense Ambient Glow for Mobile Mockup */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-indigo-500/40 blur-[120px] w-[400px] h-[400px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
-          
+
           <div className="relative w-72 h-[550px] bg-slate-900 rounded-[3rem] border-[12px] border-slate-900 shadow-2xl overflow-hidden transform transition-transform duration-700 hover:scale-105 group-hover:shadow-indigo-500/20 z-10">
             {/* iPhone Dynamic Island */}
             <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-full z-20 flex items-center justify-end px-2">
-               <div className="w-2 h-2 rounded-full bg-indigo-500/50" />
+              <div className="w-2 h-2 rounded-full bg-indigo-500/50" />
             </div>
-            
+
             {/* Inner AI Image */}
             <div className="w-full h-full bg-white flex justify-center items-start overflow-hidden relative">
-              <img 
-                src="/fastpos-shadcn-ui-tall.png" 
-                alt="Fast-POS Cloud Dashboard iOS Style" 
-                className="absolute top-[-4%] left-[-75%] w-[250%] max-w-[250%] h-auto object-cover object-top z-10"
+              <img
+                src="/fastpos-app.png"
+                alt="Fast-POS Cloud Dashboard iOS Style"
+                className="absolute w-full h-full object-top z-10"
               />
             </div>
           </div>

@@ -43,16 +43,8 @@ export default function Home() {
       />
       <AnimatedBackground />
       
-      {/* Texture Overlay (Hidden on mobile for performance) */}
-      <div 
-        className="pointer-events-none fixed inset-0 z-50 opacity-[0.03] mix-blend-overlay hidden md:block"
-        style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")' }}
-      ></div>
-
-
-
       {/* Sections */}
-      <div className="w-full z-10 flex flex-col gap-20 pb-0">
+      <div className="relative w-full z-10 flex flex-col gap-20 pb-0">
         <Hero />
         <div id="caracteristicas" className="flex flex-col gap-20 pt-20 -mt-20">
           <BentoProblem />
