@@ -4,19 +4,19 @@ export const siteConfig = {
   },
   links: {
     get whatsappSalesUrl() {
-      const message = "Hola, visite su pagina web y me interesa modernizar mi negocio con *Fast POS*. Me gustaria recibir informacion detallada o agendar una demostracion.";
+      const message = "Hola, vi su página web y me interesa el modelo híbrido de *Fast POS*. ¿Podrían darme una demostración?";
       return `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
     },
     get whatsappProLicenseUrl() {
-      const message = "Hola, estoy listo para modernizar mi negocio. Me interesa adquirir la *Licencia Pro + Actualizaciones* de Fast POS. Podrian apoyarme con el proceso de instalacion de favor?";
+      const message = "Hola, me interesa suscribirme al *Plan Cloud Pro* de Fast POS. Quiero tener el control desde mi celular y los respaldos en la nube. ¿Me ayudan con la instalación?";
       return `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
     },
     get whatsappBaseLicenseUrl() {
-      const message = "Hola, estoy listo para modernizar mi negocio. Me interesa adquirir la *Licencia Base* (Pago Unico) de Fast POS. Me podrian compartir los detalles y requisitos de instalacion?";
+      const message = "Hola, me interesa adquirir el *Plan Esencial* (Pago Único) de Fast POS para instalarlo de forma local. ¿Me pueden dar detalles?";
       return `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
     },
     get whatsappPremiumLicenseUrl() {
-      const message = "Hola, busco el servicio más avanzado. Me interesa adquirir la *Licencia Experto* de Fast POS. Solicito información sobre beneficios VIP y migración de inventario.";
+      const message = "Hola, tengo varias sucursales y me interesa el *Plan Multi-Sucursal* de Fast POS. Solicito información sobre cómo centralizar mi negocio.";
       return `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
     }
   }

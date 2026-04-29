@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 import { CursorTrailer } from "@/components/ui/CursorTrailer";
+import { Navbar } from "@/components/layout/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default function RootLayout({
     >
       <body className="bg-slate-50 text-slate-900 min-h-screen selection:bg-blue-500/30 text-shadow-sm font-sans mx-auto overflow-x-hidden antialiased">
         <CursorTrailer />
+        <Navbar />
         {children}
         <Analytics />
       </body>

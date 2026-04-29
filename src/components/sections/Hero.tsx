@@ -35,7 +35,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="text-base sm:text-lg md:text-2xl text-slate-600 font-medium max-w-2xl leading-relaxed mb-6 px-2"
         >
-          Tu sistema de ventas más simple y potente. Creado específicamente para agilizar abarrotes y negocios de mostrador.
+          El único Punto de Venta que nunca te deja tirado. Funciona velozmente sin internet y se sincroniza en vivo con tu celular.
         </motion.p>
 
         <motion.div
@@ -97,7 +97,7 @@ export function Hero() {
           transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-8 text-slate-500 font-medium text-sm"
         >
-          No requiere internet para cobrar. 100% Seguro.
+          El poder de la nube con la seguridad y rapidez del software local.
         </motion.div>
       </div>
     </section>

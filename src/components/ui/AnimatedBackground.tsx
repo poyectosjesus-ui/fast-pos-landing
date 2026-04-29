@@ -217,36 +217,39 @@ export function AnimatedBackground() {
         }}
       />
 
-      {/* --- LA AURORA (CAPA PROFUNDA) --- */}
+      {/* --- LA AURORA (CAPA PROFUNDA) - Oculta en móviles para rendimiento --- */}
       {/* Azul Eléctrico */}
       <motion.div 
         animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.6, 0.4], x: [0, 50, 0], y: [0, -30, 0] }}
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-500/40 rounded-full blur-[140px] mix-blend-multiply z-0" 
+        className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-500/40 rounded-full blur-[140px] mix-blend-multiply z-0 hidden md:block" 
       />
       
       {/* Violeta Vibrante */}
       <motion.div 
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3], x: [0, -60, 0], y: [0, 60, 0] }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute top-[10%] right-[-20%] w-[50%] h-[70%] bg-violet-500/35 rounded-full blur-[140px] mix-blend-multiply z-0" 
+        className="absolute top-[10%] right-[-20%] w-[50%] h-[70%] bg-violet-500/35 rounded-full blur-[140px] mix-blend-multiply z-0 hidden md:block" 
       />
 
       {/* Cian/Teal Saturado */}
       <motion.div 
         animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3], x: [0, 40, 0], y: [0, 20, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-        className="absolute bottom-[-20%] left-[20%] w-[70%] h-[50%] bg-teal-400/40 rounded-full blur-[140px] mix-blend-multiply z-0" 
+        className="absolute bottom-[-20%] left-[20%] w-[70%] h-[50%] bg-teal-400/40 rounded-full blur-[140px] mix-blend-multiply z-0 hidden md:block" 
       />
 
+      {/* Fondo degradado estático ultra ligero para móviles */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-blue-50/50 via-slate-50 to-teal-50/50 z-0 md:hidden" />
 
-      {/* --- LA GEOMETRÍA (CAPA EXTERIOR) --- */}
+
+      {/* --- LA GEOMETRÍA (CAPA EXTERIOR) - Oculta en móviles --- */}
       {/* Panel 1 */}
       <motion.div 
         initial={{ opacity: 0, x: 100, rotate: -15 }}
         animate={{ opacity: 1, x: 0, rotate: -12 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute top-[-20%] right-[-10%] w-[60%] h-[150%] bg-white/30 border-l border-white shadow-[0_0_60px_rgba(30,58,138,0.05)] backdrop-blur-3xl origin-top-right z-10" 
+        className="absolute top-[-20%] right-[-10%] w-[60%] h-[150%] bg-white/30 border-l border-white shadow-[0_0_60px_rgba(30,58,138,0.05)] backdrop-blur-3xl origin-top-right z-10 hidden md:block" 
       />
       
       {/* Panel 2 */}
@@ -254,7 +257,7 @@ export function AnimatedBackground() {
         initial={{ opacity: 0, y: 100, rotate: -5 }}
         animate={{ opacity: 1, y: 0, rotate: -5 }}
         transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-        className="absolute bottom-[-10%] left-[-10%] w-[120%] h-[40%] bg-white/40 border-t border-white shadow-[0_-20px_50px_rgba(30,58,138,0.04)] backdrop-blur-2xl origin-bottom-left z-10" 
+        className="absolute bottom-[-10%] left-[-10%] w-[120%] h-[40%] bg-white/40 border-t border-white shadow-[0_-20px_50px_rgba(30,58,138,0.04)] backdrop-blur-2xl origin-bottom-left z-10 hidden md:block" 
       />
       
       {/* Acentos Láser Diagonales */}

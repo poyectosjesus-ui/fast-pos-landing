@@ -43,44 +43,13 @@ export default function Home() {
       />
       <AnimatedBackground />
       
-      {/* Texture Overlay */}
+      {/* Texture Overlay (Hidden on mobile for performance) */}
       <div 
-        className="pointer-events-none fixed inset-0 z-50 opacity-[0.03] mix-blend-overlay"
+        className="pointer-events-none fixed inset-0 z-50 opacity-[0.03] mix-blend-overlay hidden md:block"
         style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")' }}
       ></div>
 
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 px-5 md:px-8 py-4 flex justify-between items-center bg-white/80 backdrop-blur-xl border-b border-slate-200/80 shadow-sm">
-        <div className="text-xl md:text-2xl font-black tracking-tight text-slate-900">
-          FAST<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">POS</span>
-        </div>
-        
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-          <a href="#caracteristicas" className="hover:text-blue-600 transition-colors">Características</a>
-          <a href="#inversion" className="hover:text-blue-600 transition-colors">Inversión</a>
-          <a 
-            href={siteConfig.links.whatsappSalesUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-bold px-6 py-2.5 rounded-xl bg-blue-600 text-white hover:bg-blue-500 transition-all shadow-md shadow-blue-500/20"
-          >
-            Comprar Ahora
-          </a>
-        </div>
 
-        {/* Mobile Menu CTA */}
-        <div className="md:hidden flex items-center">
-          <a 
-            href={siteConfig.links.whatsappSalesUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs font-bold px-5 py-2.5 rounded-lg bg-blue-600 text-white active:scale-95 transition-all shadow-md shadow-blue-500/20"
-          >
-            Agendar Cita
-          </a>
-        </div>
-      </nav>
 
       {/* Sections */}
       <div className="w-full z-10 flex flex-col gap-20 pb-0">

@@ -2,15 +2,15 @@
 
 import { motion } from "framer-motion";
 import { FeatureCard } from "../ui/FeatureCard";
-import { IconTrendingUp, IconClock, IconCash, IconWifiOff, IconLock, IconUsers } from "@tabler/icons-react";
+import { IconTrendingUp, IconClock, IconCash, IconWifiOff, IconLock, IconShieldLock, IconDeviceMobile } from "@tabler/icons-react";
 
 const benefits = [
   { icon: <IconTrendingUp className="text-blue-600" />, title: "Vende 40% Más Rápido", description: "Procesa más ventas en menos tiempo. Más clientes felices. Más dinero en tu caja." },
   { icon: <IconClock className="text-blue-600" />, title: "Ahorra 2 Horas Diarias", description: "Sin contar billetes, sin anotar en cuadernos, sin errores. Tiempo para lo que realmente importa." },
-  { icon: <IconCash className="text-blue-600" />, title: "Dinero que No Veías", description: "Sabe exactamente cuánto vendiste, cuánto ganaste y qué productos son los que realmente dan dinero." },
+  { icon: <IconDeviceMobile className="text-blue-600" />, title: "Tu Negocio en tu Bolsillo", description: "Con el plan Cloud, vigila tus ventas e inventario en tiempo real desde tu celular, estés donde estés." },
   { icon: <IconWifiOff className="text-blue-600" />, title: "Funciona Sin Internet", description: "Sistema instalado 100% local en tu PC. Si se cae el internet de la plaza, tú sigues cobrando sin interrupciones." },
   { icon: <IconLock className="text-blue-600" />, title: "Adiós a Descuadres", description: "Todo queda registrado automáticamente. Adiós a misterios de 'dónde se fue el dinero'. Todo claro." },
-  { icon: <IconUsers className="text-blue-600" />, title: "Fiados Sin Sustos", description: "Sabe quién te debe, cuánto debe y desde cuándo. Cobra deudas fácilmente. Sin olvidar nada." },
+  { icon: <IconShieldLock className="text-blue-600" />, title: "Respaldo Inquebrantable", description: "¿Se dañó tu PC? No pasa nada. Tu inventario y ventas se respaldan automáticamente en la nube. Restaura todo en minutos." },
 ];
 
 export function BenefitsGrid() {

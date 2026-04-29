@@ -7,51 +7,51 @@ import { siteConfig } from "@/config/site";
 export function Pricing() {
   const tiers = [
     {
-      title: "Licencia Básica",
-      price: "$499",
+      title: "Plan Esencial",
+      price: "$1,500",
       period: "pago único",
       features: [
-        "Software 100% Auto-instalable",
-        "Límite: 1 Caja y 1 Usuario Admin",
-        "Inventario Base y Manejo de Deudas",
-        "Sin rentas mensuales (Sin Soporte)"
+        "Licencia Vitalicia (1 Caja)",
+        "Sin mensualidades ni rentas",
+        "Inventario y Punto de Venta Offline",
+        "Base de datos 100% local (SQLite)"
       ],
       checkoutUrl: siteConfig.links.whatsappBaseLicenseUrl
     },
     {
-      title: "Licencia Avanzada",
-      price: "$1,299",
-      period: "pago único",
+      title: "Plan Cloud Pro",
+      price: "$499",
+      period: "al mes",
       isPopular: true,
-      buttonText: "Comprar Avanzada",
+      buttonText: "Probar Cloud Pro",
       features: [
-        "Múltiples Cajas y Cajeros Ilimitados",
-        "Control total de sucursales",
-        "Software 100% Auto-instalable",
-        "Sin rentas mensuales (Sin Soporte)"
-      ],
-      checkoutUrl: siteConfig.links.whatsappPremiumLicenseUrl
-    },
-    {
-      title: "Licencia Pro",
-      price: "$2,999",
-      period: "pago único",
-      features: [
-        "Todo lo de Licencia Avanzada, MÁS:",
-        "Nosotros lo instalamos y configuramos",
-        "Soporte Técnico Remoto Todo el Año",
-        "1 Año de Actualizaciones Gratuitas"
+        "Todo lo del Plan Esencial, MÁS:",
+        "App Móvil: Tu negocio en tu bolsillo",
+        "Respaldos automáticos en la nube",
+        "Soporte prioritario y actualizaciones"
       ],
       checkoutUrl: siteConfig.links.whatsappProLicenseUrl
+    },
+    {
+      title: "Multi-Sucursal",
+      price: "$1,299",
+      period: "al mes",
+      features: [
+        "Para negocios en crecimiento",
+        "Sincroniza inventario entre tiendas",
+        "Panel web centralizado para el dueño",
+        "Cajeros y sucursales ilimitadas"
+      ],
+      checkoutUrl: siteConfig.links.whatsappPremiumLicenseUrl
     }
   ];
 
   return (
     <section className="relative w-full border-y border-slate-200 bg-slate-50/50 overflow-hidden py-32 mt-20">
-      {/* Intense Ambient Glows for True Glassmorphism */}
-      <div className="absolute top-[20%] left-[10%] w-[600px] h-[600px] bg-blue-500/40 blur-[140px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[10%] right-[10%] w-[700px] h-[700px] bg-indigo-500/30 blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/20 blur-[130px] rounded-full pointer-events-none" />
+      {/* Intense Ambient Glows for True Glassmorphism (Hidden on mobile) */}
+      <div className="absolute top-[20%] left-[10%] w-[600px] h-[600px] bg-blue-500/40 blur-[140px] rounded-full pointer-events-none hidden md:block" />
+      <div className="absolute bottom-[10%] right-[10%] w-[700px] h-[700px] bg-indigo-500/30 blur-[150px] rounded-full pointer-events-none hidden md:block" />
+      <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/20 blur-[130px] rounded-full pointer-events-none hidden md:block" />
       
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16 relative">
@@ -61,7 +61,7 @@ export function Pricing() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 mb-6"
           >
-            Inversión Única. Cero Rentas.
+            Paga solo una vez, o vuela a la nube.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ export function Pricing() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl font-medium text-slate-600 max-w-2xl mx-auto"
           >
-             Instala el software en tu computadora, úsalo de por vida y despídete de las mensualidades forzosas comerciales.
+             Elige el plan perfecto para ti. Compra tu caja registradora de por vida, o adquiere el superpoder de controlar todo desde tu celular.
           </motion.p>
         </div>
 
